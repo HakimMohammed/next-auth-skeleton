@@ -6,7 +6,8 @@ import { Checkbox } from "@/components/ui/checkbox";
 
 import Link from "next/link";
 import Image from "next/image";
-import { GitHubSignInButton } from "./github-sing-in-button";
+import KeycloakSignInButton from "@/features/auth/components/keycloak-sing-in-button";
+import GitHubSignInButton from "@/features/auth/components/github-sing-in-button";
 
 const LoginForm = () => {
     return (
@@ -52,20 +53,7 @@ const LoginForm = () => {
                         <form>
                             <FieldGroup className="gap-6">
                                 <Field className="grid md:grid-cols-2 md:gap-6 gap-3">
-                                    <Button
-                                        variant="outline"
-                                        type="button"
-                                        className="text-sm text-medium text-card-foreground gap-2 dark:bg-background rounded-lg h-9 shadow-xs cursor-pointer"
-                                    >
-                                        <Image
-                                            src="https://images.shadcnspace.com/assets/svgs/icon-google.svg"
-                                            alt="google icon"
-                                            className="h-4 w-4"
-                                            width={16}
-                                            height={16}
-                                        />
-                                        Sign in with Google
-                                    </Button>
+                                    <KeycloakSignInButton />
                                     <GitHubSignInButton />
                                 </Field>
                                 <FieldSeparator className="*:data-[slot=field-separator-content]:bg-card text-sm text-muted-foreground bg-transparent">

@@ -1,13 +1,13 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import { login } from "@/features/auth/actions";
+import { loginGitHub } from "@/features/auth/actions";
 
 import Image from "next/image";
 
-export const GitHubSignInButton = () => {
+const GitHubSignInButton = () => {
     return (
         <Button
-            onClick={() => login()}
+            onClick={() => loginGitHub()}
             variant="outline"
             type="button"
             className="text-sm text-medium text-card-foreground gap-2 dark:bg-background rounded-lg h-9 shadow-xs cursor-pointer"
@@ -30,3 +30,5 @@ export const GitHubSignInButton = () => {
         </Button>
     );
 };
+
+export default GitHubSignInButton;

@@ -11,6 +11,10 @@ const nextConfig: NextConfig = {
       {
         protocol: "https",
         hostname: "images.shadcnspace.com",
+      },
+      {
+        protocol: "https",
+        hostname: "www.keycloak.org",
       }
     ],
   },
