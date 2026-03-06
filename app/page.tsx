@@ -1,5 +1,5 @@
 import { auth } from "@/auth";
-import { SignInButton } from "@/features/auth/components/sing-in-button";
+import LoginForm from "@/features/auth/components/login-form";
 import Link from "next/link";
 
 export default async function Home() {
@@ -13,11 +13,5 @@ export default async function Home() {
         );
     }
 
-    return (
-        <div>
-            <h1>Auth Skeleton with Next Auth and GitHub</h1>
-            <p>You are not signed in.</p>
-            <SignInButton />
-        </div>
-    );
+    return <LoginForm />;
 }
